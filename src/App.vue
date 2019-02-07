@@ -68,11 +68,13 @@
       <v-toolbar-title>Adopt-a-Pet</v-toolbar-title>
     </v-toolbar>
     <v-content>
+
       <v-container fluid fill-height>
         <v-layout
           justify-center
           align-center
         >
+
           <v-flex text-xs-center>
             <v-tooltip left>
               <v-btn slot="activator" :href="source" icon large target="_blank">
@@ -87,6 +89,7 @@
               <span>Codepen</span>
             </v-tooltip>
           </v-flex>
+
         </v-layout>
       </v-container>
     </v-content>
