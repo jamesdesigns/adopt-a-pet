@@ -63,7 +63,7 @@
 
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
+    <v-toolbar color="red" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Adopt-a-Pet</v-toolbar-title>
     </v-toolbar>
@@ -93,7 +93,7 @@
         </v-layout>
       </v-container>
     </v-content>
-    <v-footer color="indigo" app>
+    <v-footer color="red" app>
       <span class="white--text">&copy; 2019 Adopt a Pet | Designed by James Hooper</span>
     </v-footer>
   </v-app>
