@@ -76,7 +76,7 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Adopt-a-Pet</v-toolbar-title>
       <v-btn icon>
-          <v-icon>search</v-icon>
+          <v-icon right>search</v-icon>
         </v-btn>
     </v-toolbar>
     <v-content>
