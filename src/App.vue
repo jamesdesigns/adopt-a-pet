@@ -75,29 +75,61 @@
     <v-toolbar color="cyan" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Adopt-a-Pet</v-toolbar-title>
+      <v-btn icon>
+          <v-icon>search</v-icon>
+        </v-btn>
     </v-toolbar>
     <v-content>
 
-      <v-container fluid fill-height>
-        <v-layout
-          justify-center
-          align-center
-        >
 
-          <v-flex text-xs-center>
-            <v-tooltip left>
-              <v-btn slot="activator" :href="source" icon large target="_blank">
-                <v-icon large>code</v-icon>
-              </v-btn>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <v-btn slot="activator" icon large href="https://codepen.io/johnjleider/pen/rJdVMq" target="_blank">
-                <v-icon large>mdi-codepen</v-icon>
-              </v-btn>
-              <span>Codepen</span>
-            </v-tooltip>
-          </v-flex>
+
+      <v-card>
+        <v-container
+          fluid
+          grid-list-md
+        >
+          <v-layout row wrap>
+            <v-flex
+              v-for="card in cards"
+              :key="card.title"
+              v-bind="{ [`xs${card.flex}`]: true }"
+            >
+              <v-card>
+                <v-img
+                  :src="card.src"
+                  height="200px"
+                >
+                  <v-container
+                    fill-height
+                    fluid
+                    pa-2
+                  >
+                    <v-layout fill-height>
+                      <v-flex xs12 align-end flexbox>
+                        <span class="headline white--text" v-text="card.title"></span>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-img>
+
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn icon>
+                    <v-icon>favorite</v-icon>
+                  </v-btn>
+                  <v-btn icon>
+                    <v-icon>bookmark</v-icon>
+                  </v-btn>
+                  <v-btn icon>
+                    <v-icon>share</v-icon>
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-card>
+
 
         </v-layout>
       </v-container>
@@ -120,20 +152,11 @@
   export default {
     data: () => ({
       drawer: null,
-      items: [
-          {
-            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
-          },
-          {
-            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
-          },
-          {
-            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
-          },
-          {
-            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
-          }
-        ]
+       cards: [
+        { title: '', src: 'https://www.walgreens.com/images/adaptive/sp/920055_Tier2_Household_2600x760.jpg', flex: 12 },
+        { title: 'Dogs Rule', src: 'https://media.npr.org/assets/img/2016/04/29/istock_000068947339_medium_wide-d281af87008ebd62d2862a60d9394f4b37097160-s800-c85.jpg', flex: 6 },
+        { title: 'Cat Naps', src: 'https://team-wild.com/wp-content/uploads/2014/07/catnap.jpg', flex: 6  }
+      ]
     }),
     props: {
       source: String
