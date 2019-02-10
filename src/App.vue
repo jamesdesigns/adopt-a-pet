@@ -102,8 +102,8 @@
         </v-layout>
       </v-container>
     </v-content>
-    <v-footer color="red" app>
-      <span class="white--text">&copy; 2019 Adopt a Pet. Helping pets find deserving homes.</span>
+    <v-footer color="blue-grey lighten-1" app>
+      <span class="white--text">&copy; 2019 Adopt-a-Pet.</span>
     </v-footer>
   </v-app>
 </template>
