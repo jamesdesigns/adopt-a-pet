@@ -103,7 +103,15 @@
       </v-container>
     </v-content>
     <v-footer color="blue-grey lighten-1" app>
-      <span class="white--text">&copy; 2019 Adopt-a-Pet.</span>
+      <v-flex
+       grey darken-1
+        py-3
+        text-xs-center
+        white--text
+        xs12
+      >
+      <span class="text-xs-center white--text">&copy; 2019 Adopt-a-Pet.</span>
+          </v-flex>
     </v-footer>
   </v-app>
 </template>
