@@ -72,7 +72,7 @@
 
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="red" dark fixed app>
+    <v-toolbar color="cyan" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Adopt-a-Pet</v-toolbar-title>
     </v-toolbar>
@@ -102,15 +102,15 @@
         </v-layout>
       </v-container>
     </v-content>
-    <v-footer color="blue-grey lighten-1" app>
+    <v-footer app>
       <v-flex
-       grey darken-1
+        grey lighten-2
         py-3
         text-xs-center
-        white--text
+        black--text
         xs12
       >
-      <span class="text-xs-center white--text">&copy; 2019 Adopt-a-Pet.</span>
+      <span class="text-xs-center black--text">&copy; 2019 Adopt-a-Pet&nbsp;  |  &nbsp;Designed by Artistjameshooper.com</span>
           </v-flex>
     </v-footer>
   </v-app>
@@ -119,7 +119,21 @@
 <script>
   export default {
     data: () => ({
-      drawer: null
+      drawer: null,
+      items: [
+          {
+            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
+          },
+          {
+            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
+          },
+          {
+            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
+          },
+          {
+            src: 'https://via.placeholder.com/1200x350?text=Visit+Adopt-A-Pet.com+Now'
+          }
+        ]
     }),
     props: {
       source: String
