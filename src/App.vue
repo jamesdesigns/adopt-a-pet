@@ -83,6 +83,41 @@
 
 
 
+<v-container
+    fluid
+    grid-list-lg
+    fill-height
+    style="height: 434px"
+  >
+    <v-fade-transition mode="out-in">
+      <v-layout v-if="show" key="0" wrap>
+        <v-flex xs12>
+          <v-card>
+            <v-img
+              src="https://www.walgreens.com/images/adaptive/sp/920055_Tier2_Household_2600x760.jpg"
+              height="434"
+              class="grey darken-4"
+            ></v-img>
+            <!-- <v-card-title class="title">height</v-card-title> -->
+          </v-card>
+        </v-flex>
+
+      
+      </v-layout>
+
+      <v-layout v-else key="1" justify-center>
+        <v-btn flat @click="show = true">Load images</v-btn>
+      </v-layout>
+    </v-fade-transition>
+  </v-container>
+
+
+
+
+
+
+
+
       <v-card>
         <v-container
           fluid
@@ -136,6 +171,7 @@
     </v-content>
     <v-footer app>
       <v-flex
+      height="70"
         grey lighten-2
         py-3
         text-xs-center
@@ -152,8 +188,9 @@
   export default {
     data: () => ({
       drawer: null,
+      show: true,
        cards: [
-        { title: '', src: 'https://www.walgreens.com/images/adaptive/sp/920055_Tier2_Household_2600x760.jpg', flex: 12 },
+        
         { title: 'Dogs Rule', src: 'https://media.npr.org/assets/img/2016/04/29/istock_000068947339_medium_wide-d281af87008ebd62d2862a60d9394f4b37097160-s800-c85.jpg', flex: 6 },
         { title: 'Cat Naps', src: 'https://team-wild.com/wp-content/uploads/2014/07/catnap.jpg', flex: 6  }
       ]
