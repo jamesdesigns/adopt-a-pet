@@ -75,9 +75,6 @@
     <v-toolbar color="cyan" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Adopt-a-Pet</v-toolbar-title>
-      <v-btn icon>
-          <v-icon right>search</v-icon>
-        </v-btn>
     </v-toolbar>
     <v-content>
 
@@ -169,16 +166,15 @@
         </v-layout>
       </v-container>
     </v-content>
-    <v-footer app>
+    <v-footer height="100" grey lighten-2 app>
       <v-flex
-      height="70"
-        grey lighten-2
+        
         py-3
         text-xs-center
         black--text
         xs12
       >
-      <span class="text-xs-center black--text">&copy; 2019 Adopt-a-Pet&nbsp;  |  &nbsp;Designed by Artistjameshooper.com</span>
+      <span class="text-xs-center black--text">&copy;2019 Adopt-a-Pet&nbsp;  |  &nbsp;Designed by Artistjameshooper.com</span>
           </v-flex>
     </v-footer>
   </v-app>
@@ -191,8 +187,8 @@
       show: true,
        cards: [
         
-        { title: 'Dogs Rule', src: 'https://media.npr.org/assets/img/2016/04/29/istock_000068947339_medium_wide-d281af87008ebd62d2862a60d9394f4b37097160-s800-c85.jpg', flex: 6 },
-        { title: 'Cat Naps', src: 'https://team-wild.com/wp-content/uploads/2014/07/catnap.jpg', flex: 6  }
+        { title: 'Adopt Buddy', src: 'https://img.huffingtonpost.com/asset/5b7fdeab1900001d035028dc.jpeg?cache=sixpwrbb1s&ops=1910_1000', flex: 6 },
+        { title: 'Adopt Tabby', src: 'https://team-wild.com/wp-content/uploads/2014/07/catnap.jpg', flex: 6  }
       ]
     }),
     props: {
