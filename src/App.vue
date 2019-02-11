@@ -168,7 +168,6 @@
     </v-content>
     <v-footer height="100" grey lighten-2 app>
       <v-flex
-        
         py-3
         text-xs-center
         black--text
